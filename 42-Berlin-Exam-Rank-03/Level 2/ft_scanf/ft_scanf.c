@@ -4,19 +4,59 @@
 
 void skip_input_space()
 {
-    //Code here
+    int c;
+    // Skip all spaces, but no need to check for EOF, just read characters
+    while ((c = fgetc(stdin)) != -1 && isspace(c))
+        ;
+    // Put the last non-space character back
+    if (c != -1)
+        ungetc(c, stdin);
 }
 
 int scan_char(va_list ap)
 {
-    //Code here
-    return 0;
+    char *ch = va_arg(ap, char *);
+    int c = fgetc(stdin);
+    // Return 0 if no valid character is read
+    if (c == -1)
+        return 0;
+    *ch = (char)c;
+    return 1;
 }
 
 int scan_int(va_list ap)
 {
-    //Code here
-    return 0;
+    int *num = va_arg(ap, int *);
+    int c, sign = 1, value = 0;
+
+    skip_input_space(); // Skip leading spaces
+    
+    c = fgetc(stdin);
+    if (c == '-')
+    {
+        sign = -1;
+        c = fgetc(stdin);
+    }
+
+    if (!isdigit(c))
+    {
+        if (c != -1)
+            ungetc(c, stdin);
+        return 0;
+    }
+
+    while (isdigit(c))
+    {
+        value = value * 10 + (c - '0');
+        c = fgetc(stdin);
+    }
+
+    *num = value * sign;
+
+    if (c != -1)
+        ungetc(c, stdin); // Put back the non-digit character
+
+    return 1;
 }
 
 int scan_string(va_list ap)

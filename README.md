@@ -91,7 +91,7 @@ When you are ready to sumbit your function/program, go into Rendu and push the f
 ## Exam IDE
 
 > [!NOTE]
-You should be able to use both VSCode and Vim in the exam.
+You should be able to use only Vim in the exam.
 
 <br>
 

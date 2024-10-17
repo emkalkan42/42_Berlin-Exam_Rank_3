@@ -20,7 +20,7 @@ Can be any of the ? Functions/Programs Below:
 <table><tr><td>
   
 1. [ft_range](https://github.com/pasqualerossi/42-School-Exam-Rank-02/blob/main/Level%203/ft_range/ft_range.c)
-2. [ft_scanf](https://github.com/emkalkan42/42_Berlin-Exam_Rank_3/tree/main/Level%202/ft_scanf)
+2. [ft_scanf](https://github.com/emkalkan42/42_Berlin-Exam_Rank_3/tree/main/42-Berlin-Exam-Rank-03/Level%202/ft_scanf)
 </td></tr></table>
 
 ### :three: Level 3
@@ -91,7 +91,7 @@ When you are ready to sumbit your function/program, go into Rendu and push the f
 ## Exam IDE
 
 > [!NOTE]
-You should be able to use only Vim in the exam.
+You should be able to use both VSCode and Vim in the exam.
 
 <br>
 
